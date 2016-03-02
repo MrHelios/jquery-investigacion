@@ -1,0 +1,32 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    var esta = true;
+    $(document).ready(function(){
+
+        if(esta){
+            esta = !esta;
+            $("p").click(function(){
+                $(this).hide();
+            });
+            $("p").click(function(){
+                $(this).show(1000);
+            });
+            esta = !esta;
+        }
+
+        $("button").click(function(){
+            $("p").toggle();
+            $("h1").toggle();
+        });
+
+    });
+</script>
+{% endblock %}
+{% block content %}
+    <h1>Este es el titulo, bro.</h1>
+    <p>Si me clikeas voy a desaparecer.</p>
+
+    <button>Magia!</button>
+{% endblock %}

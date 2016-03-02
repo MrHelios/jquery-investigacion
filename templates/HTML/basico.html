@@ -1,0 +1,15 @@
+<html>
+{% load staticfiles %}
+<head>
+    <script src="{% static 'jquery-1.12.1.min.js' %}">
+    </script>
+    {% block string %}
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+
+</html>
