@@ -1,0 +1,35 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    $(document).ready(function(){
+        $("#panel").click(function(){
+            $("#bajada").slideToggle(3000);
+        });
+        $("#stop").click(function(){
+            $("#bajada").stop();
+        })
+    });
+</script>
+
+<style>
+    #panel, #bajada {
+        text-align: center;
+    }
+    #panel {
+        background-color: red;
+    }
+    #bajada {
+        display: none;
+        background-color: yellow;
+        padding: 50px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<button id="stop">Detengase</button>
+
+<div id="panel">Esto es un panel</div>
+<div id="bajada">Hola Gente!</div>
+{% endblock %}

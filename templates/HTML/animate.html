@@ -1,0 +1,67 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    $(document).ready(function(){
+
+        $("#button-1").click(function(){
+            $("#div-1").animate({
+                width: '250px',
+                height: '100px',
+            });
+            $("#div-1").animate({
+                width: '50px',
+                height: '10px',
+            });
+            $("h1").animate({
+                fontSize: '5em'
+            });
+            $("h1").animate({
+                fontSize: '0.5em'
+            });
+        });
+
+        $("#button-2").click(function(){
+            $("#div-2").animate({
+                width: '+=150px',
+                left: '+=150px'
+            });
+        });
+    });
+</script>
+
+<style>
+    #div-1 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: absolute;
+    }
+    #button-1 {
+        top: 175px;
+        position: absolute;
+    }
+
+    #div-2 {
+        top: 250px;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    #button-2 {
+        top: 360px;
+        position: absolute;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>Esto es una animacion</h1>
+
+<div id="div-1"></div>
+<button id="button-1">Magia!</button>
+
+<div id="div-2"></div>
+<button id="button-2">Magia!</button>
+{% endblock %}

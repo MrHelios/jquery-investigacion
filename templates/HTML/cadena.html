@@ -1,0 +1,23 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    $(document).ready(function(){
+        $("#div-1").click(function(){
+            $("#div-1").css("background-color", "blue").slideUp(2000).slideDown(2000);
+        });
+    });
+</script>
+
+<style>
+    #div-1 {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="div-1">Haga Magia, señor!</div>
+{% endblock %}

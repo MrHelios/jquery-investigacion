@@ -1,0 +1,48 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    var esta = true;
+    $(document).ready(function(){
+
+        $("#panel").click(function(){
+            if (esta) {
+                $("#cascada").slideDown();
+                esta = !esta;
+            }
+            else {
+                $("#cascada").slideUp();
+                esta = !esta;
+            }
+        });
+
+        $("#panel-1").click(function(){
+            $("#cascada-1").slideToggle();
+        });
+    });
+</script>
+
+<style>
+    #panel-1, #cascada-1, #panel, #cascada{
+        color: black;
+        text-align: center;
+    }
+    #panel, #panel-1{
+        padding: 5px;
+        background-color: rgba(255, 0, 0, 0.52);
+    }
+    #cascada, #cascada-1{
+        padding: 50px;
+        background-color: rgba(0, 0, 255, 0.38);
+        display: none;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="panel">Este panel es manual</div>
+<div id="cascada">Hola gente!</div>
+
+<div id="panel-1">Este es el segundo panel</div>
+<div id="cascada-1">Hola gente Maja!</div>
+{% endblock %}
