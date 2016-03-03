@@ -1,0 +1,20 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    $(document).ready(function(){
+        $("#button-1").click(function(){
+            $("p").append("Agrego texto adelante");
+        });
+        $("#button-2").click(function(){
+            $("p").prepend("Agrego texto atras");
+        });
+    });
+</script>
+{% endblock %}
+
+{% block content %}
+<p> Heyyyyyy Hola </p>
+<button id="button-2">Magia Atras!</button>
+<button id="button-1">Magia Adelante!</button>
+{% endblock %}

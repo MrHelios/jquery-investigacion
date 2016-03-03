@@ -1,0 +1,35 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    $(document).ready(function(){
+        $("#button-1").click(function(){
+            $("#p-1").text("Hola Mundo!");
+        });
+        $("#button-2").click(function(){
+            $("#p-2").html("<h1>Hola Mundo!</h1>");
+        });
+        $("#button-3").click(function(){
+            $("#input-1").val("El valor fue cambiado.");
+        });
+        // Cambia los atributos.
+        $("#button-4").click(function(){
+            $("#a-1").attr("href", "http://www.google.com.ar");
+        });
+    });
+</script>
+{% endblock %}
+
+{% block content %}
+<p id="p-1">Esto es lo mejor, bro.</p>
+<button id="button-1">Boton</button>
+
+<p id="p-2">Esto es lo mejor, bro.</p>
+<button id="button-2">Boton</button>
+
+<p>Entrada: <input type="text" id="input-1" value="Este es un valor."></p>
+<button id="button-3">Boton</button>
+
+<p><a href="www.amazon.com" id="a-1">Prueba 4.</a></p>
+<button id="button-4">Boton</button>
+{% endblock %}

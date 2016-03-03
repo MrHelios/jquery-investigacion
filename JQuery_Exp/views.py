@@ -17,3 +17,12 @@ def ejemplos_stop(request):
 
 def ejemplos_cadena(request):
     return render(request, 'HTML/cadena.html')
+
+def ejemplos_set(request):
+    return render(request, 'HTML/set.html')
+
+def ejemplos_add(request):
+    return render(request, 'HTML/add.html')
+
+def upload_basico(request):
+    return render(request, 'HTML/upload-basico.html')
