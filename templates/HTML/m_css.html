@@ -1,0 +1,44 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    $(document).ready(function(){
+        $("#button-1").click(function(){
+            $("h1, h2, p").addClass("blue");
+            $("div").addClass("important");
+            $("#div-1").addClass("important blue");
+        });
+        $("#button-2").click(function(){
+            $("h1, h2, p").removeClass("blue");
+            $("#div-1").removeClass("blue");
+        });
+        $("#button-3").click(function(){
+            $("h1, h2, p").toggleClass("blue");
+        });
+    });
+</script>
+
+<style>
+    .important {
+        font-weight: bold;
+        font-size: xx-large;
+    }
+
+    .blue {
+        color: blue;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <h1>Esto es H1</h1>
+    <h2>Esto es H2</h2>
+    <p>Esto es P</p>
+    <div id="div">Esto es DIV</div>
+    <div id="div-1">Esto es DIV IMPORTANT-BLUE</div>
+
+    <button id="button-1">Magia!</button>
+    <button id="button-2">Sacar la Magia Azul!</button>
+    <button id="button-3">Azul On/Off</button>
+
+{% endblock %}

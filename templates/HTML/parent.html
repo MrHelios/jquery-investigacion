@@ -1,0 +1,41 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    $(document).ready(function(){
+        $("#span-1").parent().css({"border":"2px solid red"});
+        $("#span-2").parents("ul").css({"border":"2px solid orange"});
+    })
+</script>
+
+<style>
+    p {
+        width: 100px;
+        height: 100px;
+    }
+    #span-1 {
+        width: 50px;
+        height: 50px;
+        border: 2px solid black;
+    }
+    #span-1 {
+        width: 50px;
+        height: 50px;
+        border: 2px solid black;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<body>
+    <h2>Ejemplo Parent I</h2>
+    <p>
+    <span id="span-1">Hijo</span>
+    </p>
+
+    <h2>Ejemplo Parent II</h2>
+    <ul>
+    <li><span id="span-2">Hijo</span></li>
+    </ul>
+</body>
+{% endblock %}

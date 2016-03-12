@@ -1,0 +1,29 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            var txt = "";
+            txt += "Longitud: " + $("#div-1").width() + "</br>";
+            txt += "Altura: " + $("#div-1").height();
+            $("#div-1").html(txt);
+        });
+    });
+</script>
+
+<style>
+    #div-1 {
+        width: 250px;
+        height: 250px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<body>
+    <h1>Trabajando con los metodos de Width() y Height()</h1>
+    <button>Magia!</button>
+    <div id="div-1"></div>
+</body>
+{% endblock %}

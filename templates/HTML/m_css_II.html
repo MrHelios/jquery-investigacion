@@ -1,0 +1,35 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    $(document).ready(function(){
+        $("body").css("background-color","red");
+        $("#button-1").click(function(){
+            $("body").css("background-color","yellow");
+        });
+        $("#button-2").click(function(){
+            $("body").css("background-color","red");
+        });
+        $("#button-3").click(function(){
+            $("p").css({"background-color":"yellow", "font-size":"200%"});
+        });
+    });
+</script>
+
+<style>
+    body {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<body>
+    <p>Naranjaaaaaaaaaaaaaaaa</p>
+
+    <button id="button-1">Que sea amarillo!</button>
+    <button id="button-2">Que sea rojo!</button>
+    <button id="button-3">Multiple</button>
+</body>
+{% endblock %}

@@ -24,5 +24,20 @@ def ejemplos_set(request):
 def ejemplos_add(request):
     return render(request, 'HTML/add.html')
 
+def manipular_css(request):
+    return render(request, 'HTML/m_css.html')
+
+def manipular_css_II(request):
+    return render(request, 'HTML/m_css_II.html')
+
+def dim_wid_hei(request):
+    return render(request, 'HTML/dimension-1.html')
+
+def dim_innwid_innhei(request):
+    return render(request, 'HTML/dimension-2.html')
+
+def parent(request):
+    return render(request, 'HTML/parent.html')
+
 def upload_basico(request):
     return render(request, 'HTML/upload-basico.html')

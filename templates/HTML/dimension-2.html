@@ -1,0 +1,34 @@
+{% extends 'HTML/basico.html' %}
+
+{% block string %}
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            var txt = "";
+            txt += "Width: " + $("#div-1").width() + "</br>";
+            txt += "Height: " + $("#div-1").height() + "</br>";
+            txt += "Inner width: " + $("#div-1").innerWidth() + "</br>";
+            txt += "Inner height: " + $("#div-1").innerHeight();
+            $("#div-1").html(txt)
+        })
+    });
+</script>
+
+<style>
+    #div-1 {
+        width: 400px;
+        height: 400px;
+        padding: 10px;
+        background-color: yellow;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<body>
+    <h1>Trabajando con los metodos de innerWidth e innerHeight</h1>
+    <button>Magia!</button>
+    <div id="div-1">
+    </div>
+</body>
+{% endblock %}
